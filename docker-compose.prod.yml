@@ -11,3 +11,15 @@ services:
       - "3000:3000"
     working_dir: /app
     tty: true
+  
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+      target: prod
+    image: next-backend-prod:1.0.0
+    container_name: next-backend-prod
+    ports:
+      - "8000:8000"
+    working_dir: /backend
+    tty: true

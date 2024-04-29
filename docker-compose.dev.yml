@@ -13,3 +13,17 @@ services:
       - ./app:/app
     working_dir: /app
     tty: true
+  
+  backend:
+    build: 
+      context: ./backend
+      dockerfile: Dockerfile
+      target: dev
+    image: next-backend-dev:1.0.0
+    container_name: next-backend-dev
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend:/backend
+    working_dir: /backend
+    tty: true
