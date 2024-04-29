@@ -1,0 +1,7 @@
+{
+    "name": "next-app-dev-container",
+    "dockerComposeFile": "../docker-compose.dev.yml",
+    "service": "app",
+    "workspaceFolder": "/app",
+    "shutdownAction": "none"
+}
